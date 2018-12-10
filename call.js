@@ -356,14 +356,22 @@ app.post('*', function(req, res) {
     res.send(twiml.toString());
 })
 
+app.get('/*', function(req,res) {
+    const twiml = new VoiceResponse();
+    console.log('Hit get request')
+    twiml.redirect('/voice');
+    res.type('text/xml');
+    res.send(twiml.toString());
+});
+
 app.get("/status", function(req, res) {
     res.type('text')
     res.send("Hello I am up and running !")
 })
 
 // Create an HTTP server and listen for requests on port 1337
-console.log('Twilio Client app HTTP server running at http://127.0.0.1:80');
-app.listen(80);
+console.log('Twilio Client app HTTP server running at http://127.0.0.1:8080');
+app.listen(process.env.PORT || 8080);
 
 
 
