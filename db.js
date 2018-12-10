@@ -1,8 +1,8 @@
 var Request = require("request");
 var request = require('sync-request');
 mlUrl = 'http://35.243.243.141:8000/api';
-lmsDbUrl = 'http://127.0.0.1:3000';
-// lmsDbUrl = 'https://f508ce81.ngrok.io'
+// lmsDbUrl = 'http://127.0.0.1:3000';
+lmsDbUrl = 'https://twilio-lms-mongo.herokuapp.com'
 
 /* Working for User Validation Module */
 exports.validateUser = function(harmonyId) {
