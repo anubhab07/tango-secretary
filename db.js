@@ -1,6 +1,6 @@
 var Request = require("request");
 var request = require('sync-request');
-mlUrl = 'http://35.237.165.15:8000/api';
+mlUrl = 'http://35.185.46.60:8000/api';
 // lmsDbUrl = 'http://127.0.0.1:3000';
 lmsDbUrl = 'https://twilio-lms-mongo.herokuapp.com'
 
